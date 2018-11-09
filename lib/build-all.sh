@@ -23,7 +23,7 @@ pack_upload ()
 	# pack into .7z and upload to server
 	# stage: init
 	display_alert "Signing and compressing" "Please wait!" "info"
-	local version="Armbian_${REVISION}_${BOARD^}_${DISTRIBUTION}_${RELEASE}_${BRANCH}_${VER/-$LINUXFAMILY/}"
+	local version="Armbian_HassIO_${REVISION}_${BOARD^}_${DISTRIBUTION}_${RELEASE}_${BRANCH}_${VER/-$LINUXFAMILY/}"
 	local subdir="archive"
 	[[ $BUILD_DESKTOP == yes ]] && version=${version}_desktop
 	[[ $BETA == yes ]] && local subdir=nightly
