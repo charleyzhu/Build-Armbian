@@ -21,19 +21,30 @@ Main() {
 		jessie)
 			# your code here
 			# InstallOpenMediaVault # uncomment to get an OMV 3 image
+			Install_Docker()
 			;;
 		xenial)
 			# your code here
+			Install_Docker()
 			;;
 		stretch)
 			# your code here
 			# InstallOpenMediaVault # uncomment to get an OMV 4 image
+			Install_Docker()
 			;;
 		bionic)
 			# your code here
+			Install_Docker()
 			;;
 	esac
 } # Main
+
+Install_Docker() {
+	echo "deb https://download.docker.com/linux/${family,,} $distribution edge" > /etc/apt/sources.list.d/docker.list
+	curl -fsSL "https://download.docker.com/linux/${family,,}/gpg" | apt-key add -qq - > /dev/null 2>&1
+	apt-get update
+	apt-get install -y -qq --no-install-recommends docker-ce
+}
 
 InstallOpenMediaVault() {
 	# use this routine to create a Debian based fully functional OpenMediaVault
