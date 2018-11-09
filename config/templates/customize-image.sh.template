@@ -44,6 +44,7 @@ ubuntu_Install_Docker() {
 	curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | apt-key add -qq - > /dev/null 2>&1
 	apt-get update
 	apt-get install -y -qq --no-install-recommends docker-ce
+	installHassIO
 }
 
 debian_Install_Docker() {
@@ -51,6 +52,12 @@ debian_Install_Docker() {
 	curl -fsSL "https://download.docker.com/linux/debian/gpg" | apt-key add -qq - > /dev/null 2>&1
 	apt-get update
 	apt-get install -y -qq --no-install-recommends docker-ce
+	installHassIO
+}
+
+installHassIO() {
+	apt-get install -y -qq --no-install-recommends apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common
+	curl -sL https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | bash -s -- -m qemuarm-64
 }
 
 InstallOpenMediaVault() {
