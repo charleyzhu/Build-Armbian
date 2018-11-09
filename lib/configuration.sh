@@ -203,8 +203,8 @@ case $RELEASE in
 esac
 
 
-DEBIAN_MIRROR='httpredir.debian.org/debian'
-UBUNTU_MIRROR='ports.ubuntu.com/'
+DEBIAN_MIRROR='mirrors.ustc.edu.cn/debian'
+UBUNTU_MIRROR='mirrors.ustc.edu.cn/ubuntu-ports'
 
 # For user override
 if [[ -f $SRC/userpatches/lib.config ]]; then

@@ -21,20 +21,20 @@ Main() {
 		jessie)
 			# your code here
 			# InstallOpenMediaVault # uncomment to get an OMV 3 image
-			Install_Docker()
+			Install_Docker
 			;;
 		xenial)
 			# your code here
-			Install_Docker()
+			Install_Docker
 			;;
 		stretch)
 			# your code here
 			# InstallOpenMediaVault # uncomment to get an OMV 4 image
-			Install_Docker()
+			Install_Docker
 			;;
 		bionic)
 			# your code here
-			Install_Docker()
+			Install_Docker
 			;;
 	esac
 } # Main
