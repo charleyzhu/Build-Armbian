@@ -57,7 +57,6 @@ debian_Install_Docker() {
 
 installHassIO() {
 	apt-get install -y -qq --no-install-recommends apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat software-properties-common
-	curl -sL https://raw.githubusercontent.com/home-assistant/hassio-build/master/install/hassio_install | bash -s -- -m qemuarm-64
 }
 
 InstallOpenMediaVault() {
